@@ -1,1 +1,22 @@
 #calcule a soma dos numeros impares Gerar inteiros no intervalo de 20 a 50.
+
+import random
+
+
+x = random.randint(20, 50)
+y = random.randint(20, 50)
+
+print(f"X = {x}")
+print(f"Y = {y}")
+
+menor = min(x, y)
+maior = max(x, y)
+
+soma_impares = 0
+
+
+for numero in range(menor + 1, maior):
+    if numero % 2 != 0:
+        soma_impares += numero
+
+print(f"\nSoma dos ímpares entre {x} e {y} = {soma_impares}")

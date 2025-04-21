@@ -1,0 +1,24 @@
+#gerar numeros inteiros de 1 a 100  BEE 1101
+
+import random
+
+while True:
+   
+    M = random.randint(-5, 100)
+    N = random.randint(-5, 100)
+
+    if M <= 0 or N <= 0:
+        print(f"Par de parada detectado: M = {M}, N = {N}")
+        break
+
+    menor = min(M, N)
+    maior = max(M, N)
+
+    soma = 0
+    linha = ""
+
+    for i in range(menor, maior + 1):
+        linha += f"{i} "
+        soma += i
+
+    print(f"{linha}Sum={soma}")
