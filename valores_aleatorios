@@ -1,0 +1,20 @@
+#valores aleatorios positivvos e negativos BEE 1060
+import random
+
+positivos = 0
+valores_lidos = 0
+
+while valores_lidos < 6:
+    valor = round(random.uniform(-100, 100), 1)
+
+    if valor == 0:
+        continue
+
+    print(valor)
+
+    if valor > 0:
+        positivos += 1
+
+    valores_lidos += 1
+
+print(f"\n{positivos} valores positivos")
