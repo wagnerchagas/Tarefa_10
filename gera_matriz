@@ -1,0 +1,20 @@
+#programa gera matriz
+import random
+
+# Gerar matriz 3x3 com inteiros entre 1 e 12
+matriz = [[random.randint(1, 12) for _ in range(3)] for _ in range(3)]
+
+# Exibir a matriz
+print("Matriz 3x3 gerada:")
+for linha in matriz:
+    print(linha)
+
+# Atribuindo elementos da matriz
+a, b, c = matriz[0]
+d, e, f = matriz[1]
+g, h, i = matriz[2]
+
+# Aplicando a Regra de Sarrus
+determinante = (a * e * i + b * f * g + c * d * h) - (c * e * g + b * d * i + a * f * h)
+
+print(f"\nDeterminante da matriz (Regra de Sarrus): {determinante}")
